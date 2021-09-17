@@ -1,11 +1,14 @@
 ﻿import java.util.Scanner;
 
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane.CloseAction;
+
 class Fahrkartenautomat
 {
     public static void main(String[] args)
     {
        Scanner tastatur = new Scanner(System.in);
-      
+       tastatur.close();
+
        double zuZahlenderBetrag; 
        double eingezahlterGesamtbetrag;
        double eingeworfeneMünze;

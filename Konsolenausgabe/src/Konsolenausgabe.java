@@ -22,6 +22,5 @@ public class Konsolenausgabe {
         System.out.printf("%8.3s\n", Sternchen);
         System.out.printf("%8.3s\n", Sternchen);
         System.out.printf("%8.3s\n", Sternchen);
-        
     }
 }
