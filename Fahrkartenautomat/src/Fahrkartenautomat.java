@@ -7,7 +7,7 @@ class Fahrkartenautomat
     public static void main(String[] args)
     {
        Scanner tastatur = new Scanner(System.in);
-       tastatur.close();
+       
 
        double zuZahlenderBetrag; 
        double eingezahlterGesamtbetrag;
