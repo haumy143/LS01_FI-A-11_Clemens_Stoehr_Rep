@@ -41,7 +41,8 @@ public class Variable {
         /* 9. Fuer eine Berechnung wird die elektrische Elementarladung benoetigt.
               Vereinbaren Sie eine geeignete Variable und geben Sie sie auf
               dem Bildschirm aus.*/
-            double elementarladung;
+            double elementarladung = 1.602 * 10e19;
+            System.out.println("die Elementarladung eines Elektrons beträgt " + elementarladung);
         
         /*10. Ein Buchhaltungsprogramm soll festhalten, ob eine Zahlung erfolgt ist.
               Vereinbaren Sie eine geeignete Variable. */
@@ -52,7 +53,7 @@ public class Variable {
               und geben Sie die Variable auf dem Bildschirm aus.*/
             zahlungErfolgt = true;
             if (zahlungErfolgt == true);
-                System.out.println("zahlung ist erfolgt.");
+                System.out.println("Zahlung ist erfolgt.");
 
       }//main
     }// Variablen
