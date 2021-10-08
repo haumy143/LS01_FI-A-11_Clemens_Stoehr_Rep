@@ -15,7 +15,7 @@ public static void main(String[] args) {
     String operator = eingabe.next();
     eingabe.close();
     
-    System.out.println(zahl1 + " " + operator + " " + zahl2);
+    System.out.print(zahl1 + " " + operator + " " + zahl2 + " = ");
     
     double ergebnis = 0;
 
