@@ -1,5 +1,7 @@
 ﻿import java.util.Scanner;
 
+import javax.print.event.PrintEvent;
+
 class Fahrkartenautomat
 {
     public static void main(String[] args)
@@ -10,20 +12,25 @@ class Fahrkartenautomat
        double eingezahlterGesamtbetrag;
        double eingeworfeneMünze;
        double rückgabebetrag;
+       double ticketPreis;
+       double anzahlTickets;
 
-       System.out.print("Zu zahlender Betrag (EURO): ");
-       zuZahlenderBetrag = tastatur.nextDouble();
-
+       System.out.print("Wie viel kostet das ein Ticket?: ");
+       ticketPreis = tastatur.nextDouble();
+       System.out.print("Wie viele Tickets brauchen Sie: ");
+       anzahlTickets = tastatur.nextDouble();
+    
+       zuZahlenderBetrag = ticketPreis * anzahlTickets;
+       
        // Geldeinwurf
        // -----------
        eingezahlterGesamtbetrag = 0.0;
        while(eingezahlterGesamtbetrag < zuZahlenderBetrag)
        {
-    	   zuZahlenderBetrag = zuZahlenderBetrag - eingezahlterGesamtbetrag;
-           System.out.printf("Noch zu zahlen: %.2f Euro\n", zuZahlenderBetrag);
-    	   System.out.print("Eingabe (mind. 5Ct, höchstens 2 Euro): ");
-    	   eingeworfeneMünze = tastatur.nextDouble();
-           eingezahlterGesamtbetrag += eingeworfeneMünze;
+        System.out.printf("Noch zu zahlen: %.2f Euro\n", zuZahlenderBetrag - eingezahlterGesamtbetrag);
+    	System.out.print("Eingabe (mind. 5Ct, höchstens 2 Euro): ");
+    	eingeworfeneMünze = tastatur.nextDouble();
+        eingezahlterGesamtbetrag += eingeworfeneMünze;
        }
 
        // Fahrscheinausgabe
@@ -46,7 +53,7 @@ class Fahrkartenautomat
        rückgabebetrag = eingezahlterGesamtbetrag - zuZahlenderBetrag;
        if(rückgabebetrag > 0.0)
        {
-    	   System.out.printf("Der Rückgabebetrag in Höhe von %.2f Euro", rückgabebetrag);
+    	   System.out.printf("Der Rückgabebetrag in Höhe von %.2f Euro\n", rückgabebetrag);
     	   System.out.println("wird in folgenden Münzen ausgezahlt:");
 
            while(rückgabebetrag >= 2.0) // 2 EURO-Münzen
