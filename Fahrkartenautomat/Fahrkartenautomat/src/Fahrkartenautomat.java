@@ -1,17 +1,13 @@
 ﻿import java.util.Scanner;
 
-import javax.print.event.PrintEvent;
+// import javax.print.event.PrintEvent;
 
 class Fahrkartenautomat
 {
     public static void main(String[] args)
     {
         double zuZahlenderBetrag; 
-        double eingezahlterGesamtbetrag;
-        double eingeworfeneMünze;
         double rückgabebetrag;
-        double ticketPreis;
-        double anzahlTickets;
         Scanner tastatur = new Scanner(System.in);
 
         zuZahlenderBetrag = erfassungBestellung();
@@ -19,9 +15,10 @@ class Fahrkartenautomat
         fahrscheinausgabe();
         rückgeldberechnung(rückgabebetrag);
         guteFahrt();
+
+        tastatur.close();
     }
 
-    
     public static double erfassungBestellung() {
         Scanner tastatur = new Scanner(System.in);
         double ticketPreis;
@@ -37,7 +34,7 @@ class Fahrkartenautomat
         return zuZahlenderBetrag;
 
     } 
-    
+
     public static double bezahlvorgang(double zuZahlenderBetrag) {
         double eingezahlterGesamtbetrag;
         double eingeworfeneMünze;
@@ -57,6 +54,7 @@ class Fahrkartenautomat
         rückgabebetrag = eingezahlterGesamtbetrag - zuZahlenderBetrag;
         return rückgabebetrag;
     }
+
     public static void fahrscheinausgabe() {
         System.out.println("\nFahrschein wird ausgegeben");
         for (int i = 0; i < 8; i++)
