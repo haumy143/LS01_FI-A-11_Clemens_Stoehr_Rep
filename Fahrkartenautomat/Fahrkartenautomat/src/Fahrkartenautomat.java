@@ -6,47 +6,47 @@ class Fahrkartenautomat
 {
     public static void main(String[] args)
     {
-       Scanner tastatur = new Scanner(System.in);
+        Scanner tastatur = new Scanner(System.in);
       
-       double zuZahlenderBetrag; 
-       double eingezahlterGesamtbetrag;
-       double eingeworfeneMünze;
-       double rückgabebetrag;
-       double ticketPreis;
-       double anzahlTickets;
+        double zuZahlenderBetrag; 
+        double eingezahlterGesamtbetrag;
+        double eingeworfeneMünze;
+        double rückgabebetrag;
+        double ticketPreis;
+        double anzahlTickets;
 
-       System.out.print("Wie viel kostet das ein Ticket?: ");
-       ticketPreis = tastatur.nextDouble();
-       System.out.print("Wie viele Tickets brauchen Sie: ");
-       anzahlTickets = tastatur.nextDouble();
+        System.out.print("Wie viel kostet das ein Ticket?: ");
+        ticketPreis = tastatur.nextDouble();
+        System.out.print("Wie viele Tickets brauchen Sie: ");
+        anzahlTickets = tastatur.nextDouble();
     
        zuZahlenderBetrag = ticketPreis * anzahlTickets;
-       
+        
        // Geldeinwurf
        // -----------
-       eingezahlterGesamtbetrag = 0.0;
-       while(eingezahlterGesamtbetrag < zuZahlenderBetrag)
-       {
+        eingezahlterGesamtbetrag = 0.0;
+        while(eingezahlterGesamtbetrag < zuZahlenderBetrag)
+        {
         System.out.printf("Noch zu zahlen: %.2f Euro\n", zuZahlenderBetrag - eingezahlterGesamtbetrag);
     	System.out.print("Eingabe (mind. 5Ct, höchstens 2 Euro): ");
     	eingeworfeneMünze = tastatur.nextDouble();
         eingezahlterGesamtbetrag += eingeworfeneMünze;
-       }
+        }
 
        // Fahrscheinausgabe
        // -----------------
-       System.out.println("\nFahrschein wird ausgegeben");
-       for (int i = 0; i < 8; i++)
-       {
-          System.out.print("=");
-          try {
+        System.out.println("\nFahrschein wird ausgegeben");
+        for (int i = 0; i < 8; i++)
+        {
+        System.out.print("=");
+        try {
 			Thread.sleep(250);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-       }
-       System.out.println("\n\n");
+        }
+        System.out.println("\n\n");
 
        // Rückgeldberechnung und -Ausgabe
        // -------------------------------
