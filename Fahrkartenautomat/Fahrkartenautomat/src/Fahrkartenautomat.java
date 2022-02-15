@@ -6,6 +6,19 @@ class Fahrkartenautomat
 {
     public static void main(String[] args)
     {
+        Scanner tastatur1 = new Scanner(System.in);
+        System.out.println("möchten Sie ein Ticket kaufen?(j/n): ");
+        String kaufwille = tastatur1.nextLine();
+
+        while (kaufwille.equals("j")) {
+            ablauf();
+            System.out.println("möchten Sie noch ein Ticket kaufen?(j/n): ");
+            Scanner tastatur2 = new Scanner(System.in);
+            kaufwille = tastatur2.nextLine();
+        }
+    }
+
+    public static void ablauf() {
         double zuZahlenderBetrag; 
         double rückgabebetrag;
         Scanner tastatur = new Scanner(System.in);
@@ -16,7 +29,6 @@ class Fahrkartenautomat
         rückgeldberechnung(rückgabebetrag);
         guteFahrt();
 
-        tastatur.close();
     }
 
     public static double erfassungBestellung() {
@@ -26,7 +38,7 @@ class Fahrkartenautomat
         double zuZahlenderBetrag;
 
         
-        System.out.print("Wie viel kostet das ein Ticket?: ");
+        System.out.print("Wie viel kostet ein Ticket?: ");
         ticketPreis = tastatur.nextDouble();
         System.out.print("Wie viele Tickets brauchen Sie: ");
         anzahlTickets = tastatur.nextDouble();
