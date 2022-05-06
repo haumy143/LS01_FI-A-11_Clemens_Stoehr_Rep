@@ -1,33 +1,41 @@
+import java.util.Scanner;
 public class App {
     public static void main(String[] args) throws Exception {
-        int[] zahlen = {1, 6, 3, 7, 2, 2, 4, 8}; 
-        System.out.println(zahlen.length);
-        for (int i = 0; i<=7; i++){
-        System.out.print(zahlen[i] + ", ");
-        }
-        System.out.println("");
-
-        // jede zweite zahl beginnend mit der zweiten
-        for (int i = 1; i<=zahlen.length; i+=2){ 
-        System.out.print(zahlen[i] + ", ");
-        }
-        System.out.println("");
-        // es wird bis lenth 4 ausgegeben also 5 stellen
-        for (int i = 0; i<=zahlen.length/2; i++){
-        System.out.print(zahlen[i] + ", ");
-}
-        System.out.println("");
+        int ersteZahl;
+        int zweiteZahl;
+        int zählerUngerade = 0;
+        int zählerGerade = 0;
         
-        for (int i = zahlen.length - 1; i>= 0; i--){
-        System.out.print(zahlen[i] + ", ");
-}
-        System.out.println("");
-        for (int i = 1; i < zahlen.length; i+=3){
-        System.out.print(zahlen[i] + ", ");
+        Scanner eingabe = new Scanner(System.in);
+        System.out.println("bitte gib eine erste zahl ein: ");
+        ersteZahl = eingabe.nextInt();
+        System.out.println("bitte gib eine zweite zahl ein: ");
+        zweiteZahl = eingabe.nextInt();
+        
+        if (ersteZahl == zweiteZahl) {
+            System.out.println("die beiden zahlen sind gleich groß");
         }
         
-        // for (int i = zahlen.length - 1; i>= 0; i/=2){
-        // System.out.print(zahlen[i] + ", ");}
-
+        if (ersteZahl > zweiteZahl) {
+            int temp;
+            temp = ersteZahl;
+            ersteZahl = zweiteZahl;
+            zweiteZahl = temp;
+            }
+        System.out.println("die ungerade zahlen zwischen " + ersteZahl + " und " + zweiteZahl + " sind: ");
+        
+        for (int i = ersteZahl; i < zweiteZahl; i++) {
+            if (i%2!= 0) {
+                System.out.println(i);
+                zählerUngerade = zählerUngerade + 1;                  
+            }
+            else {
+                zählerGerade = zählerGerade + 1;
+            }
+        }
+        System.out.println("zwischen den beiden Zahlen sind " + zählerUngerade + " ungrade Zahlen und " + zählerGerade + " gerade Zahlen");    
     }
 }
+    
+    
+
