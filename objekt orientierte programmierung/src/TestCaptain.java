@@ -2,26 +2,17 @@ import Captain;
 
 public class TestCaptain {
 
-	public static void main(String[] args) {
+	public static void main() {
 		//Erzeugen der Objekte
 				Captain cap1 = new Captain ( "Jean Luc", "Picard", 2364, 4500.0);
 				Captain cap2 = new Captain ( "Azetbur", "Gorkon", 2373, 0.0);
-			    /* TODO: 9. Erzeugen Sie ein zusaetzliches Objekt cap3 und geben Sie es auch auf der Konsole aus, 
-			     * die Attributwerte denken Sie sich aus.
-			     */
-				Captain cap3 = new Captain("Clemi", "")
-
-			    /*TODO: 10. Erzeugen Sie zwei zusaetzliche Objekte cap4 und cap5
-			     * mit dem Konstruktor, der den Namen und Vornamen initialisiert,
-			     * die Attributwerte denken Sie sich aus.
-			     */
-			    
-			    
-			    //Setzen der Attribute
-			    /* TODO: 11. Fuegen Sie cap4 und cap5 jeweils ein Gehalt hinzu, 
-			     * die Attributwerte denken Sie sich aus.
-			     * Geben Sie cap4 und cap5 auch auf dem Bildschirm aus.
-			     */
+				Captain cap3 = new Captain("Clemi", "Stoehr", 2369, 3000.0);
+				Captain cap4 = new Captain();
+				cap4.setNames("Benny", "Bigs");
+				cap4.setcaptainYears(2356);
+				Captain cap5 = new Captain();
+				cap5.setNames("Egon", "Gorkon");
+				cap5.setcaptainYears(2358);
 
 		        //Bildschirmausgabe
 			    System.out.println("Name: " + cap1.getSurame());
@@ -37,21 +28,19 @@ public class TestCaptain {
 			    System.out.println("Vollname: " + cap2.vollname());
 			    System.out.println(cap2 + "\n"); //Die toString() Methode wird aufgerufen
 
-			    //TODO: Ausgabe von cap4, erg�nzen Sie die fehlenden Methodenaufrufen
-			    System.out.println("Name: "  );
-			    System.out.println("Vorname: "  );
-			    System.out.println("Kapit�n seit: "  );
-			    System.out.println("Gehalt: " +  " F�derationsdukaten");
-			    System.out.println("Vollname: "  );
-			    System.out.println( + "\n"); //Die toString() Methode wird aufgerufen
+		        System.out.println("\nName: " + cap4.getSurname());
+			    System.out.println("Vorname: " + cap4.getName());
+			    System.out.println("Kapit�n seit: " + cap4.getCaptainYears());
+			    System.out.println("Gehalt: " + cap4.getSalary() + " Darsek");
+			    System.out.println("Vollname: " + cap4.vollname());
+			    System.out.println(cap2 + "\n"); //Die toString() Methode wird aufgerufen
 			    
-			  //TODO: Ausgabe von cap5, erg�nzen Sie die fehlenden Methodenaufrufen
-			    System.out.println("Name: " );
-			    System.out.println("Vorname: "  );
-			    System.out.println("Kapit�n seit: "  );
-			    System.out.println("Gehalt: " +   " F�derationsdukaten");
-			    System.out.println("Vollname: "  );
-			    System.out.println( + "\n"); //Die toString() Methode wird aufgerufen
+			  	System.out.println("\nName: " + cap5.getSurname());
+			  	System.out.println("Vorname: " + cap5.getName());
+			  	System.out.println("Kapit�n seit: " + cap5.getCaptainYears());
+			  	System.out.println("Gehalt: " + cap5.getSalary() + " Darsek");
+			  	System.out.println("Vollname: " + cap5.vollname());
+			  	System.out.println(cap5 + "\n"); //Die toString() Methode wird aufgerufen
 			    
 			}
 
