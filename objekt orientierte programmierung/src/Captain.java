@@ -4,13 +4,13 @@ public class Captain {
 	private String surname;
 	private String name;
 	private int captainYears;
-	private double gehalt;
+	private double salary;
 	
-	public Captain(String surname, String name, int captainYears, double gehalt) {
+	public Captain(String surname, String name, int captainYears, double salary) {
 		this.name = name;
 		this.surname = surname;
 		this.captainYears = captainYears; 
-		this.gehalt = gehalt;
+		this.salary = salary;
 }
 
 	public void setNames(String surname, String name) {
@@ -34,14 +34,14 @@ public class Captain {
 		return this.name;
 	}
 
-	public void setSalary(double gehalt) {
-		if (gehalt >= 0) {
-		this.gehalt = gehalt;
+	public void setSalary(double salary) {
+		if (salary >= 0) {
+		this.salary = salary;
 		}
 	}
 
-	public double getSalary(double gehalt) {
-		return gehalt;
+	public double getSalary(double salary) {
+		return salary;
 	}
 
 	public void setcaptainYears(int captainYears) {
